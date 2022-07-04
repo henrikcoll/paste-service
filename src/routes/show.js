@@ -3,7 +3,7 @@ const Paste = require('../models/paste');
 exports.show = async (req, res) => {
 	const paste = await Paste.findOne({ slug: req.params.slug });
 	return await res.view('show', {
-		title: paste.title,
+		title: paste.getFileName(),
 		paste,
 	});
 };

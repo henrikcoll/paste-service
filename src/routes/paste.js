@@ -18,6 +18,7 @@ exports.create = async (req, res) => {
 		content: paste.content,
 		language: paste.language,
 		url: paste.getUrl(),
+		filename: paste.getFileName(),
 	};
 };
 
@@ -35,6 +36,7 @@ exports.list = async (req, res) => {
 			title: paste.title,
 			language: paste.language,
 			url: paste.getUrl(),
+			filename: paste.getFileName(),
 		})),
 		page: {
 			current: page,
@@ -55,6 +57,7 @@ exports.getPaste = async (req, res) => {
 		content: paste.content,
 		language: paste.language,
 		url: paste.getUrl(),
+		filename: paste.getFileName(),
 	};
 };
 
