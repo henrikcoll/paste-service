@@ -33,7 +33,6 @@ exports.list = async (req, res) => {
 		pastes: pastes.map((paste) => ({
 			slug: paste.slug,
 			title: paste.title,
-			content: paste.content,
 			language: paste.language,
 			url: paste.getUrl(),
 		})),
@@ -42,6 +41,20 @@ exports.list = async (req, res) => {
 			limit: limit,
 			count: pastes.length,
 		},
+	};
+};
+
+exports.getPaste = async (req, res) => {
+	const paste = await Paste.findOne({ slug: req.params.slug });
+
+	if (!paste) return res.notFound();
+
+	return {
+		slug: paste.slug,
+		title: paste.title,
+		content: paste.content,
+		language: paste.language,
+		url: paste.getUrl(),
 	};
 };
 

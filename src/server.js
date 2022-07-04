@@ -44,6 +44,11 @@ exports.start = async () => {
 		{ preHandler: authMiddleware.auth() },
 		pasteRoutes.list
 	);
+	fastify.get(
+		'/api/v1/pastes/:slug',
+		{ preHandler: authMiddleware.auth() },
+		pasteRoutes.getPaste
+	);
 	fastify.post(
 		'/api/v1/pastes',
 		{ preHandler: authMiddleware.auth() },
