@@ -1,0 +1,24 @@
+{
+	"name": "paste_service",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"@fastify/cors": "^8.0.0",
+		"@fastify/sensible": "^5.1.0",
+		"@fastify/static": "^6.4.0",
+		"@fastify/view": "^7.0.0",
+		"@highlightjs/cdn-assets": "^11.5.1",
+		"config": "^3.3.7",
+		"ejs": "^3.1.8",
+		"fastify": "^4.2.0",
+		"mongoose": "^6.4.2",
+		"nanoid": "^3.3.4"
+	}
+}

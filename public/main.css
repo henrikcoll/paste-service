@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 72rem;
+	margin: auto;
+	font-family: sans-serif;
+}
+
+nav {
+	background-color: #343434;
+	color: white;
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
+
+nav .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-start {
+	height: 100%;
+}
+
+.nav-end {
+	height: 100%;
+}
+
+nav .title {
+	font-size: 2rem;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-button {
+	color: white;
+	text-decoration: none;
+	height: 100%;
+	display: inline-block;
+	font-size: 1em;
+}
+
+.nav-button:visited {
+	color: white;
+}
+
+.nav-button:hover {
+	color: #DDDDDD;
+}

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/public/paste/hljs/styles/default.min.css">
+<link rel="stylesheet" href="/public/paste/hljs/styles/atom-one-dark.min.css ">
+
+<nav>
+	<div class="container">
+		<div class="nav-start">
+			<div class="title">Heka Paste</div>
+		</div>
+		<div class="nav-end">
+			<a class="nav-button" href="<%= paste.getUrl() %>/raw">Raw</a>
+		</div>
+	</div>
+</nav>
+<div class="container">
+	<h1><%= paste.title %></h1>
+	<pre><code class="language-<%= paste.language%>"><%= paste.content %></code></pre>
+</div>
+
+<script src="/public/paste/hljs/highlight.min.js"></script>
+<script>
+	hljs.highlightAll();
+</script>
